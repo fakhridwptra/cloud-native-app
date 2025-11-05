@@ -14,11 +14,11 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      # 2. Menyusun folder publish (misalnya docs/) jika diperlukan
-      - name: Create docs directory (optional)
+      # 2. Menyusun folder docs/ jika diperlukan
+      - name: Create docs directory
         run: |
           mkdir -p docs
-          cp -r * docs/
+          cp *.html docs/
 
       # 3. Deploy ke GitHub Pages
       - name: Deploy to GitHub Pages
